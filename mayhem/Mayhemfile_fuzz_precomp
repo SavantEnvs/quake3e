@@ -1,0 +1,9 @@
+project: savantenvs/quake3e
+target: fuzz_precomp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_precomp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_precomp
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_precomp/fuzz_precomp.dict
